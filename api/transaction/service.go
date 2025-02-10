@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/brunomvsouza/ynab.go/api"
+	"github.com/fbis251/ynab.go/api"
 )
 
 // NewService facilitates the creation of a new transaction service instance

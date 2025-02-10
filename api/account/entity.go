@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 // Package account implements account entities and services
-package account // import "github.com/brunomvsouza/ynab.go/api/account"
+package account // import "github.com/fbis251/ynab.go/api/account"
 import (
 	"time"
 )

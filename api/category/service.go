@@ -8,7 +8,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/brunomvsouza/ynab.go/api"
+	"github.com/fbis251/ynab.go/api"
 )
 
 const currentMonthID = "current"

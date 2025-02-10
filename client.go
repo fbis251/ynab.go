@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 // Package ynab implements the client API
-package ynab // import "github.com/brunomvsouza/ynab.go"
+package ynab // import "github.com/fbis251/ynab.go"
 
 import (
 	"bytes"
@@ -14,14 +14,14 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/brunomvsouza/ynab.go/api"
-	"github.com/brunomvsouza/ynab.go/api/account"
-	"github.com/brunomvsouza/ynab.go/api/budget"
-	"github.com/brunomvsouza/ynab.go/api/category"
-	"github.com/brunomvsouza/ynab.go/api/month"
-	"github.com/brunomvsouza/ynab.go/api/payee"
-	"github.com/brunomvsouza/ynab.go/api/transaction"
-	"github.com/brunomvsouza/ynab.go/api/user"
+	"github.com/fbis251/ynab.go/api"
+	"github.com/fbis251/ynab.go/api/account"
+	"github.com/fbis251/ynab.go/api/budget"
+	"github.com/fbis251/ynab.go/api/category"
+	"github.com/fbis251/ynab.go/api/month"
+	"github.com/fbis251/ynab.go/api/payee"
+	"github.com/fbis251/ynab.go/api/transaction"
+	"github.com/fbis251/ynab.go/api/user"
 )
 
 const apiEndpoint = "https://api.youneedabudget.com/v1"
@@ -60,7 +60,7 @@ type client struct {
 
 	accessToken string
 
-	client    *http.Client
+	client *http.Client
 
 	user        *user.Service
 	budget      *budget.Service
