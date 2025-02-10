@@ -37,6 +37,15 @@ type Category struct {
 	GoalTargetMonth *api.Date `json:"goal_target_month"`
 	// GoalPercentageComplete the percentage completion of the goal
 	GoalPercentageComplete *uint16 `json:"goal_percentage_complete"`
+
+	GoalNeedsWholeAmount *bool `json:"goal_needs_whole_amount"`
+	GoalDay              *int  `json:"goal_day"`
+	GoalCadence          *int  `json:"goal_cadence"`
+	GoalCadenceFrequency *int  `json:"goal_cadence_frequency"`
+	GoalMonthsToBudget   *int  `json:"goal_months_to_budget"`
+	GoalUnderFunded      *int  `json:"goal_under_funded"`
+	GoalOverallFunded    *int  `json:"goal_overall_funded"`
+	GoalOverallLeft      *int  `json:"goal_overall_left"`
 }
 
 // Group represents a resumed category group for a budget

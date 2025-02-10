@@ -30,6 +30,8 @@ type Month struct {
 	// Activity the total amount in transactions in the month, excluding those
 	// categorized to "Inflow: To be Budgeted" (milliunits format)
 	Activity *int64 `json:"activity"`
+
+	Deleted bool `json:"deleted"`
 }
 
 // Summary represents the summary of a month for a budget

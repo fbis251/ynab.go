@@ -37,6 +37,13 @@ type Transaction struct {
 	ImportID     *string `json:"import_id"`
 	PayeeName    *string `json:"payee_name"`
 	CategoryName *string `json:"category_name"`
+
+	ImportPayeeName         *string `json:"import_payee_name"`
+	ImportPayeeNameOriginal *string `json:"import_payee_name_original"`
+	MatchedTransactionID    *string `json:"matched_transaction_id"`
+	TransferTransactionID   *string `json:"transfer_transaction_id"`
+	DebtTransactionType     *string `json:"debt_transaction_type"`
+	FlagName                *string `json:"flag_name"`
 }
 
 // Summary represents the summary of a transaction for a budget
@@ -83,6 +90,10 @@ type SubTransaction struct {
 	// TransferAccountID If a transfer, the account_id which the
 	// sub-transaction transfers to
 	TransferAccountID *string `json:"transfer_account_id"`
+
+	PayeeName             *string `json:"payee_name"`
+	CategoryName          *string `json:"category_name"`
+	TransferTransactionId *string `json:"transfer_transaction_id"`
 }
 
 // Hybrid represents a hybrid transaction

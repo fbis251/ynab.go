@@ -30,4 +30,10 @@ const (
 	TypeInvestment Type = "investmentAccount"
 	// TypeMortgage DEPRECATED identifies a mortgage account
 	TypeMortgage Type = "mortgage"
+
+	TypeAutoLoan     Type = "autoLoan"
+	TypeStudentLoan  Type = "studentLoan"
+	TypePersonalLoan Type = "personalLoan"
+	TypeMedicalDebt  Type = "medicalDebt"
+	TypeOtherDebt    Type = "otherDebt"
 )
