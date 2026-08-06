@@ -310,17 +310,24 @@ func (s *Service) GetScheduledTransaction(budgetID, scheduledTransactionID strin
 type Filter struct {
 	Since *api.Date
 	Type  *Status
+	// LastKnowledgeOfServer The starting server knowledge. If provided,
+	// only transactions that have changed since last_knowledge_of_server
+	// will be included
+	LastKnowledgeOfServer uint64
 }
 
-// ToQuery returns the filters as a HTTP query string
+// ToQuery returns the filters as an HTTP query string
 func (f *Filter) ToQuery() string {
-	pairs := make([]string, 0, 2)
+	pairs := make([]string, 0, 6)
 	if f.Since != nil && !f.Since.IsZero() {
 		pairs = append(pairs, fmt.Sprintf("since_date=%s",
 			api.DateFormat(*f.Since)))
 	}
 	if f.Type != nil {
 		pairs = append(pairs, fmt.Sprintf("type=%s", string(*f.Type)))
+	}
+	if f.LastKnowledgeOfServer != 0 {
+		pairs = append(pairs, fmt.Sprintf("last_knowledge_of_server=%d", f.LastKnowledgeOfServer))
 	}
 	return strings.Join(pairs, "&")
 }
